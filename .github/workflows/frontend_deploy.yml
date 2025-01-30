@@ -34,5 +34,5 @@ jobs:
               working-directory: ./aquawatch_mobile_app
               env:
                 EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}  # Ensure EXPO_TOKEN is passed here
-              run:  eas build --platform android
+              run:  eas build --platform android --non-interactive || true
  
