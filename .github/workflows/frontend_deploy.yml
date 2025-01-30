@@ -35,3 +35,4 @@ jobs:
               env:
                 EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}  # Ensure EXPO_TOKEN is passed here
               run:  eas build --platform android
+ 
