@@ -1,0 +1,37 @@
+name: Expo Prod Build
+run-name: ${{ github.actor }} Build of Frontend
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - 'aquawatch_mobile_app/**'   
+    workflow_dispatch: # Manual trigger
+    
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🏗 Setup repo
+              uses: actions/checkout@v3
+
+            - name: 🏗 Setup Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18.x
+
+            - name: 🏗 Setup EAS
+              run: npm install -g eas-cli
+
+            - name: Login to EAS
+              run: eas whoami
+              env:
+                EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+
+            - name: 🚀 Build app
+              working-directory: ./aquawatch_mobile_app
+              env:
+                EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+              run:  eas build --platform android --non-interactive --no-wait
+ 
