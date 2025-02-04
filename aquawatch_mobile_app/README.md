@@ -17,7 +17,7 @@ This folder contains the various files related to the application.
  - [git 🔗](https://git-scm.com/) - version control. For installing git, please see the [git website 🔗](https://git-scm.com/).
  - [npm 🔗](https://www.npmjs.com/) - package manager. For installing npm, please see [npm docs 🔗](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm).
  - [Android Studio 🔗](https://developer.android.com/studio) or Test Flight (Apple). This will take a while and take a good chuck of space. Start a device emulator. For more info see [here 🔗](https://developer.android.com/codelabs/basic-android-kotlin-compose-emulator#2) (these are technically not required but highly recommended).
- - Expo Go on iOS and Android. 
+ - Expo Go on iOS and Android - to test the app
  - All other prerequisites are node_packages. To install them see 'Getting Started'.
 
 ## Prerequisites (recommended)

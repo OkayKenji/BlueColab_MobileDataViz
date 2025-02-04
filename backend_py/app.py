@@ -327,7 +327,7 @@ with ui.layout_columns():
 # Creation of down drop to get the water parameters
 ui.input_selectize(
     "parameter", "Select parameter:",
-    choices=[ "pH","Temperature","Conductivity","Salinity","Dissolved Oxygen","Turbidity"]
+    choices=[ "Conductivity","Temperature","pH","Salinity","Dissolved Oxygen","Turbidity"]
 )
 
 # Creation of dropdowns to get current years

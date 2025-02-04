@@ -16,12 +16,12 @@ import { Image, TouchableOpacity, View } from 'react-native';
 import { tabBarStyles, middleButtonStyles, iconStyles } from './stylesCard'; 
 import waterDropIcon from './assets/free-water-drop-2-462137.png'; 
 import homeIcon from './assets/HomeIcon.png'; 
-import settingsIcon from './assets/NavGraphIcon.png';
+import monthlyDataIcon from './assets/NavGraphIcon.png';
 
 // Create the stack navigators
 const HomeStack = createStackNavigator();
 const MiddleStack = createStackNavigator();
-const SettingsStack = createStackNavigator();
+const MonthlyDataStack = createStackNavigator();
 
 // Stack navigator for the Home tab
 function HomeStackNavigator() {
@@ -46,12 +46,12 @@ function MiddleStackNavigator() {
   );
 }
 
-// Stack navigator for the Settings tab
-function SettingsStackNavigator() {
+// Stack navigator for the Monthly tab
+function MonthlyDataStackNavigator() {
   return (
-    <SettingsStack.Navigator screenOptions={{ headerShown: true }}>
-      <SettingsStack.Screen name="Monthly Data" component={MonthlyData} />
-    </SettingsStack.Navigator>
+    <MonthlyDataStack.Navigator screenOptions={{ headerShown: true }}>
+      <MonthlyDataStack.Screen name="Monthly Data" component={MonthlyData} />
+    </MonthlyDataStack.Navigator>
   );
 }
 
@@ -93,11 +93,11 @@ export default function App() {
           }}
         />
         <Tab.Screen
-          name="SettingsTab"
-          component={SettingsStackNavigator}
+          name="MonthlyDataTab"
+          component={MonthlyDataStackNavigator}
           options={{
             tabBarIcon: ({ focused }) => (
-              <Image source={settingsIcon} style={[iconStyles.iconStyle, { opacity: focused ? 1 : 0.5 }]} />
+              <Image source={monthlyDataIcon} style={[iconStyles.iconStyle, { opacity: focused ? 1 : 0.5 }]} />
             ),
           }}
         />

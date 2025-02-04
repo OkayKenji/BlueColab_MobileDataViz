@@ -1,11 +1,6 @@
 name: Shinyapps IO Dev Deployment
 run-name: ${{ github.actor }} Deployment of Dev Backend
 on:
-  pull_request:
-    branches:
-      - 'main'
-    paths:
-      - 'backend_py/**'
   workflow_dispatch: # Manual trigger
 
 jobs:
